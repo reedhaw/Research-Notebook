@@ -2,23 +2,23 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "Welcome to Reed Haw's Open Research Notebook!\n\n\nFor more information, see \nReed Haw.ca\n, and if you want to see the original course, you can find it at \nCrafting Digital History\n, or follow along in the \nWorkbook\n! \n\n\nThese sites are still under construction.\n\n\nIt should be noted that both this site, and my other site (\nReed Haw.ca\n) are both under construction still. If you have problems viewing a page or if you notice something wrong, please feel free to \ncontact me\n! I appreciate all feedback. \n\n\nRead up on my work in each module!\n\n\nFeel free to read up on my notes for each of the modules for \nCrafting Digital History\n, you can find each module in the navigation pane to the right.", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#welcome-to-reed-haws-open-research-notebook", 
+            "text": "For more information, see  Reed Haw.ca , and if you want to see the original course, you can find it at  Crafting Digital History , or follow along in the  Workbook !", 
+            "title": "Welcome to Reed Haw's Open Research Notebook!"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/#these-sites-are-still-under-construction", 
+            "text": "It should be noted that both this site, and my other site ( Reed Haw.ca ) are both under construction still. If you have problems viewing a page or if you notice something wrong, please feel free to  contact me ! I appreciate all feedback.", 
+            "title": "These sites are still under construction."
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/#read-up-on-my-work-in-each-module", 
+            "text": "Feel free to read up on my notes for each of the modules for  Crafting Digital History , you can find each module in the navigation pane to the right.", 
+            "title": "Read up on my work in each module!"
         }, 
         {
             "location": "/hello_world/", 
