@@ -1,0 +1,31 @@
+# Module 2
+2/16/2016 8:37:25 PM 
+
+## Exercise 1
+I did a search for my surname (Haw) in the memorial database, and found no casualties reported in the war. Now I do know this is accurate (on the Canadian side) as all the members in my family that fought in the war survived. However, upon doing a search for Haw in England, I found four servicemen that died in the Wars, and they all appeared to be from the same family (John and Richard were both common names among the four). 
+
+## Exercise 2
+
+Using Outwit Hub I imported the contents of the search for "pie" on [http://www.stoa.org/]. Scraping the HTML from the search page allowed me to view the elements that are invisible behind the CSS of the page (mostly). I've added a few lines of the table below:
+
+| Collection Time | Source URL | Transcription|
+|-----------------|------------|--------------|
+| 2/16/2016 6:26:16 PM	| http://www.stoa.org/sol-bin/search.pl	| Meaning you will depart. Sophocles [sc. uses the word].|
+| 2/16/2016 6:26:16 PM	| http://www.stoa.org/sol-bin/search.pl	| [Meaning] to the ground, into/towards [the] earth. Also [sc. attested is] χαμᾶζε, [also meaning] to the ground.|
+|2/16/2016 6:26:16 PM	| http://www.stoa.org/sol-bin/search.pl	| [The words] χλοερός and χλωρός ["pale green"] [are derived] from χολή ["bile"], and from this the [word] ὠχρός ["sallow"] [also comes]. And [sc. also attested is] χλωρότης ["greenness"].|	
+
+This information can be valuable when looking at large allotments of information. A search can only give you one or two things at a time, but by using software such as Outwit Hub, I am able to capture multiple pieces of data at a time from a web page, including source URL, date and the captured text. By modifying the search parameters, one could easily use Outwit hub to quickly capture large amounts of search data, and by compiling into a spreadsheet it allows for  easy viewing and visualization of the important information, as well as the ability to create data charts and graphs. Ultimately it would be one of the easiest ways to gather information. The ability to see a compilation of what is written in the page gives a powerful overview, which is especially important in research. 
+
+## Exercise 3
+
+This section of the module was one I was nervous to begin. I was told that it was going to be a difficult section, especially for Windows users (which, of course, I am one). But entering this Exercise I didn't find it as difficult as I had anticipated. Most of the stuff that is typically unused by other people, but editing the `path` variable under system environments to include CoreUtils and installing wget through chocolatey are all things that I had previously had to deal with. My previous experience working with these advanced settings and programs made it significantly easier to work with the Canadiana JSON program. I used the search for articles and pieces on the Titanic written between 1910 and 1916, and with the program I was able to download these articles onto my computer. One thing I noticed is the first two tests I ran of the program it was able to recognize and work properly, but I was getting the error that wget was an `uknown command`, so I had to figure out how to properly install wget. I realized I could use chocolatey in either Git Bash or command prompt to download and install the program (chocolatey is now one of my favourite programs). After successfully installing this, I got my `output.txt` file, and the only thing that remained was to split it up. I tried running `splitthingsup.sh` but it gave my over 24,000 files that mostly had 1 kb of data for each containing next to nothing. So I tried the code `awk '/identifier/{"F"++i;}{print > "newoutput"i".txt";}' output.txt` written by Lee Mordechai, and it worked significantly better, leaving me with 204 files. Much more manageable. I might even take a look to see if I can divide it up split it up with my own identifiers. 
+
+## Exercise 4
+
+This exercise was more of a developmental/eyeopening thing for most people I think. Backing up and redundancies is probably one of my favourite things to do. I am a firm believer that things need to be backed up on a regular basis. I have my phone backing up to a cloud daily, and my computer backing up to an external drive every hour. I hope to set up NAS (network attached storage) server using an old computer, because I'm weirdly paranoid about that. So reading Donna Yates redundancies made me excessively happy. Although I don't have three external hard drives, I love the way Yates does this backup, and all of the redundancies to ensure that they will never be lost. I can see the paranoia behind the failing URLs and the slight possibility of corrupting the PDFs, I would likely not have quite so many redundancies as that, but I also am not writing academic articles for my career, but if I was I would likely do the same. 
+
+Now, if I were to do the same from now on, I would likely create a folder for the paper and save the PDFs there, and create a backup on my external. However, I have never used BibDesk before, but I am definitely going to try it, and if I like it I will definitely use it. And when it comes to me and filling in fields, I have to complete them all. 
+
+## Going Further: Wget
+
+So Wget is one of those things that I think would be very VERY useful. And I basically have a handle on it. I managed to get it to mostly work at downloading the archives.org articles, but my biggest problem was it was originally saying there was an error unable to resolve the host in regards to the options for wget, aka a `-i` or `-e robots=off`, so I went to the Wget cheat sheet and read through all of it. In it I was able to see what each command was and tried playing around with a few things. After a while I finally got the program to start grabbing things, but then I was getting `Error ... 404 not found`, so upon inspection I noticed that Wget was adding %22 to each one of my URLs, so something was wrong there with my text file. Unfortunately I don't quite have time to look into it too deeply at the moment, but when I do have troubles with Wget in the future, I at least have an idea at what I need to look at to find the problem. It is definitely one of my favourite tools so far though. 

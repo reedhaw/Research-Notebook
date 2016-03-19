@@ -1,0 +1,14 @@
+site_name: Open Research Notebook
+pages:
+  - Home: 'index.md'
+  - Module 1: 
+    - 'hello_world.md'
+    - 'markdown_cheetsheet.md'
+  - 'Module_2.md'
+theme: readthedocs
+repo_url: https://github.com/reedhaw/Research-Notebook
+repo_name: 'GitHub'
+site_description: 'Open Research notebook for Crafting Digital History | Reed Haw'
+site_author: 'Reed Haw'
+site_favicon: favicon.png
+copyright: 'Copyright © 2016 Reed Haw'
