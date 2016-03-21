@@ -101,6 +101,14 @@
                 
                     <li><a class="toctree-l4" href="#text-encoding">Text Encoding</a></li>
                 
+                    <li><a class="toctree-l4" href="#transcription">Transcription</a></li>
+                
+                    <li><a class="toctree-l4" href="#regex">Regex</a></li>
+                
+                    <li><a class="toctree-l4" href="#open-refine">Open Refine</a></li>
+                
+                    <li><a class="toctree-l4" href="#stanford-ner">Stanford NER</a></li>
+                
             
             </ul>
         
@@ -147,7 +155,7 @@
 <p>3/19/2016 1:16:47 PM </p>
 <h2 id="text-encoding">Text Encoding</h2>
 <h3 id="recovered-histories-vetting"><a href="https://www.recoveredhistories.org">Recovered Histories</a> Vetting</h3>
-<p><strong>Negatives</strong>:</p>
+<h4 id="negatives">Negatives:</h4>
 <ul>
 <li>Site is "Lottery Funded", and does not appear to be affiliated with an academic institution</li>
 <li>Websites design and style is outdated, which creates possibility that all the information is outdated, or not to modern standards </li>
@@ -155,7 +163,7 @@
 <li>A significant portion of the literature in the collection appears to be from slavers and free white men</li>
 <li>Some items in collection have very messy handwriting, making it more difficult to encode the information and recognize characters </li>
 </ul>
-<p><strong>Positives</strong>:</p>
+<h4 id="positives">Positives:</h4>
 <ul>
 <li>Site is "Lottery Funded", which can be viewed in a positive way, as it prevents people from becoming biased or for altering information to help prove their point</li>
 <li>Encourages users to generate own content using site as raw resource</li>
@@ -163,7 +171,7 @@
 <li>Documents in collection are scanned and then uploaded, they are not transcribed, which can cause differences</li>
 <li>Search tool provides what appears to be accurate reading of the collection</li>
 </ul>
-<h3 id="transcription">Transcription</h3>
+<h2 id="transcription">Transcription</h2>
 <p>The transcription went smoothly at first. Upon entering my first tags, I tested it in Internet Explorer and got the colourfully transcribed version of <a href="http://www.recoveredhistories.org/pamphlet1.php?page=1&amp;amp;orderby=MaxID&amp;amp;catid=66">Negro Slavery by Zachary MacAulay</a>. But then I went back and added some a few more place and name tags, and the text disappeared. I had the paragraphs separated and encased in tags, rather than inline tags, and I think that's where my problem came from. For example:</p>
 <p>After going through each paragraph break, I managed to get proper formatting back, with colours. My suspicion is that one of my location tags got separated when I was spacing out the text. A simple mistake.  </p>
 <h3 id="transformations">Transformations</h3>
@@ -171,7 +179,7 @@
 <p>In <code>SG_transformer.xsl</code>, the browser will be looking at tags such as <code>ID</code>, or <code>Repository</code>. I <em>believe</em> this uses an elif system, where it defines a list of words as the root of the tag, and each tag would receive a value-of, which might give a tooltip? I'm not 100% on the appearance of the .xml page once these tags are used. </p>
 <p>To define different .xsl sheets, you would change the <code>href</code> designation on line 2 from: <code>&lt;?cml-stylesheet type="text/xsl" href="000stylesheet.xsl"?&gt;</code> to <code>&lt;?cml-stylesheet type="text/xsl" href="SG_transformer.xsl"?&gt;</code>. I tried this and didn't get any change in my own .xml file, but I believe that is 1. because I don't have any of the tags and 2. because the <code>SG_transformer.xsl</code> file does not have any defined template styles in it. I compared it to the 000style.xsl and the colours and appearance of the tags are defined under the <code>style</code> tag throughout the document, which <code>SG_transformer.xsl</code> is lacking. </p>
 <p>If you want to see the pages, you can view my transcription <a href="http://reedhaw.github.io/page5">here</a>. I also apologize for putting the transformer.xsl file as code, the underscore in it was italicizing large swathes of my text that happened to fall between them. </p>
-<h3 id="regex">Regex</h3>
+<h2 id="regex">Regex</h2>
 <p>After reading the gentle introduction, I can understand how powerful it can be once one knows how to use it. It's a good thing I made a copy. I also need to be careful as to where I leave my cursor when I'm searching. When I leave it at the end, it's hard to find anything in the document after it. </p>
 <p><code>\r\n</code> did not work to find the blank lines. To remove the white spaces, I went into <a href="http://regexr.com/">RegExr's Cheatsheet</a> and found the Regex for word, which was <code>\w</code>, and then used <code>\r\n[^\w].+</code> to find all of the white spaces in my document to remove. It successfully worked, however it did leave a few large chunks with blank lines that I can't get RegEx to clear. I suspect that it is because there was more than one line with it, and when I replaced the previous characters with the the empty replace bar, it replaced everything, but maybe put in an invisible character I can't see. I'm not sure yet, still trying. For the sake of my sanity I had to go through and remove each chunk by hand. It wasn't difficult though, as there were only twelve or so of these chunks. I think it's where "Digitized By Google" used to sit in the document, and they may have put in something that my text editor can't see/copy. Still not sure.  </p>
 <p>I find that <a href="http://regexr.com/">RegExr</a> doesn't seem to process my work properly. I'm not sure why, but I actually find it relatively easy to use Notepad++ as it displays a window at the bottom of the document with all of the information that the find function works. And if something doesn't work, ctrl+Z works magical wonders. </p>
@@ -182,10 +190,10 @@ Then I realized my misplaced space was in the wrong group, and found that <code>
 David G. Bumet, Alc^ La Branche, December 17, 1839 63</code></pre>
 But then upon checking the original document, that is what Google's OCR thought the characters represented.</p>
 <p>Something messed up my saves and I managed to save over my step 5 with an earlier version, so I have to backtrack a bit to get back on track, and redo step five and six. In the midst of finding this, I realized I had left the dates at the ends of each entry, so every search would come up with more than three commas in each sentence. So backtrack a little further to step 4. And I managed to fix it with the given Regex. I'm not a hundred percent on what made that occur. </p>
-<h3 id="open-refine">Open Refine</h3>
+<h2 id="open-refine">Open Refine</h2>
 <p>Interesting tool. I worked through it all only to find that it left a few entries (possibly worse off). I think its because I might have been trying to add an accented e, but it didn't like it, as a few of my entries have an @ sign in it randomly that wasn't there before. I might try running it through again later, but at least I now know how to basically work the program (which is awesome). Just to play with it, I'm now uploading my .csv into Palladio to see what it comes up with. Data visualization is one of my favourite things! </p>
 <p>I don't quite understand it at the moment. Maybe I'll come back to it. </p>
-<h3 id="stanford-ner">Stanford NER</h3>
+<h2 id="stanford-ner">Stanford NER</h2>
 <p>So I'm having significant issues with this one. I can't seem to run the <code>ner-gui.bat</code> file to run, it opens a window only to immediately close it again. So following the directions on the end of the Open Refine page, I attempted to run it from the command line in the folder and I'm getting an exception in thread, but I can't figure out what I've done wrong. I have a feeling its something to do with a missing Java definition. I think it's specifically struggling with <code>edu.stanford.nlp.ie.crf.CRFClassifier</code>  </p>
 <p>I figured it out. The problem was that I've been trying to run it from command line with the text from the <a href="http://workbook.craftingdigitalhistory.ca/supporting%20materials/ner/">workbook</a>, which wasn't working. So I tried updating Java, and did that successfully. Still nothing. I was able to successfully open a gui using <code>stanford-ner.jar</code>, but when I put the text in and selected a classifier, it was not doing anything. So I deleted a large selection of it and finally got my results! </p>
 <p>It highlighted my text like it was supposed to. But now the problem remains that I don't have all of the text classified, which I think is going to be a problem in the next exercise. I have a suspicion that the problem is that my computer isn't allocating enough memory, which the Stanford NER page says is a problem: </p>
