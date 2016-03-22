@@ -202,7 +202,7 @@ But then upon checking the original document, that is what Google's OCR thought 
 </blockquote>
 <p>I tried increasing the amount of memory Java gets by default, it did not work either. So now I'm going to try and run only half the file. If that works, I'll save the single file into two files, run each one individually, then amalgamate the two after. I know it doesn't exactly fix my issues long term but it is a working solution. </p>
 <p>Success with half the document! I've broken it into two individual files now to run through the NER gui.</p>
-<p><strong>Update</strong>
+<p><strong>Update:</strong>
 The splitting didn't work, it tagged the files but it only highlighted it in the gui. So I went back and edited the <code>ner-gui.bat</code> file, adding a <code>pause</code> function so I could read what the command file without it auto-quitting, I discovered it was having giving an <code>unable to allocate space</code>. SO I went into the .bat file and messed around with the <code>Java -mx</code> size, and found that it worked successfully, and I could run file through the gui and successfully save a tagged version of the file (which I couldn't do before). </p>
 <p><strong>The tagged Texas letters can be found <a href="http://reedhaw.github.io/tagged-texas-letters.txt">here</a>.</strong></p>
 <p><strong>And the index can be found <a href="https://github.com/reedhaw/reedhaw.github.io/blob/master/cleaned-texas-index.csv">here</a>.</strong></p>
