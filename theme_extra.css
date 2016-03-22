@@ -6,7 +6,7 @@ body {
 }
 
 h3, h4, h5, h6 {
-    color: #2980b9;
+    color: #87b672;
     font-weight: 300
 }
 
@@ -38,6 +38,7 @@ h3, h4, h5, h6 {
 .wy-nav-side {
     height: 100%;
     overflow-y: auto;
+	color: #87b672;
 }
 
 /*
