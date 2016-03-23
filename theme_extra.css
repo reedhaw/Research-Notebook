@@ -23,7 +23,7 @@ a:hover {
 }
 
 .wy-side-nav-search input[type=text]{
-	border-radius: 0px;
+	border-radius: 10px;
 	border-color: BC6C00
 }
 
@@ -39,7 +39,7 @@ a:hover {
     display: block;
     position: relative;
     font-size: 90%;
-    color: #838383;
+    color: #F38B00;
 }
 
 .wy-menu-vertical .subnav a {
