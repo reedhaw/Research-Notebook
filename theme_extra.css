@@ -23,7 +23,7 @@ a:hover {
 }
 
 .wy-side-nav-search input[type=text]{
-	border-radius: 4px;
+	border-radius: 2px;
 	border-color: BC6C00
 }
 
@@ -42,6 +42,9 @@ a:hover {
     color: #F38B00;
 }
 
+.wy-menu-vertical a {
+	color: #F38B00;
+}
 .wy-menu-vertical .subnav a {
     padding: 0.4045em 2.427em;
 }
