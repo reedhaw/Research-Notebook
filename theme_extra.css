@@ -6,7 +6,7 @@ body {
 }
 
 h3, h4, h5, h6 {
-    color: #87b672;
+    color: #2980B9;
     font-weight: 300
 }
 
@@ -126,6 +126,13 @@ code.cs, code.c {
     padding-left: 1em;
 }
 
+.wy-side-nav-search{
+	background-color: #F38B00;
+}
+
+.wy-nav-top{
+	background-color: #F38B00;
+}
 
 /*
  * Improve inline code blocks within admonitions.
