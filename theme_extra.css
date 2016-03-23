@@ -24,7 +24,7 @@ a:hover {
 
 .icon.icon-home {
 	color: #343131;
-	size: 115%;
+	font-size: 2rem;
 }
 
 .wy-side-nav-search input[type=text]{
